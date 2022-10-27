@@ -1,0 +1,80 @@
+.addr-container{
+    position: relative;
+    margin: 0;
+    top:60px;
+    left:0;
+    height: auto;
+    color: var(--color-text);
+
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+    display: flex;
+    justify-content: center;
+}
+.addr-section{
+    width: 80vw;
+    max-width: 600px;
+    background-color: cornflowerblue;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.addr-topic{
+    font-size: 1.2rem;
+    background-color: cornflowerblue;
+    text-align: left;
+}
+.addr-control{
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-bg);
+}
+.addr-added{
+    background-color: white;
+    width:100%;
+    max-width: 220px;
+    margin-top: 10px;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.addr-added-btn{
+    margin-top: 0.5rem;
+}
+
+.errorAlert{
+    margin-top: 5px;
+    color: red;
+    font-size: 0.8rem;
+}
+.form-group{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+
+.fg-btn{
+    max-width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}

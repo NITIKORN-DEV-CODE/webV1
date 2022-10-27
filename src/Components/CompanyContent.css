@@ -1,0 +1,42 @@
+.content-company {
+    position: relative;
+    margin: 0;
+    top:60px;
+    left:0;
+    height: auto;
+    color: var(--color-text);
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.content-company-topic {
+    width:80vw;
+    max-width: 600px;
+    text-align:left;
+    padding:1rem;
+    font-size:1.5rem;
+}
+
+.content-company-detail {
+    width: 80vw;
+    max-width: 600px;
+    text-align: left;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.content-company-detail ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.content-company-detail ul li{
+   text-align: start;
+   padding-bottom: 1rem;
+}

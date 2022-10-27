@@ -1,0 +1,60 @@
+.homeContainer{
+    position: relative;
+    top:60px;
+    left:0;
+    height: auto;
+}
+
+.main-promotion {
+    position: relative;
+    height: auto;
+    margin-top: 1rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.main-promotion img{
+    width: 90vw;
+    max-width: 600px;
+}
+
+.pro-detail {
+    margin-top: 10px;
+    align-self: center;
+    max-width: 600px;
+    text-align: justify;
+}
+
+.pro-topic {
+    font-size: 1.7rem;
+}
+
+.pro-explain {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.containerMain{
+    position:relative;
+    margin-top: 2rem;
+    padding: 1rem;
+    height: auto;
+    max-width: 1200px;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content:center;
+    gap: 10px;
+}
+
+@media (max-width:600px){
+    .containerMain{
+        display:grid;
+        grid-template-columns: auto;
+    }
+}

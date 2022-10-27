@@ -1,0 +1,94 @@
+.order-container{
+    position: relative;
+    margin: 0;
+    top:60px;
+    left:0;
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 2rem;
+}
+
+.order-section{
+    margin-top: 1rem;
+    padding: 1rem 10px 10px 10px;
+    background-color:cornflowerblue;
+    width: 80vw;
+    min-width: 500px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.order-topic{
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.order-remark{
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 100;
+}
+
+
+.order-product{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.order-product-img img{
+    width:50px;
+}
+
+.detail-container{
+    background-color: var(--color-bg);
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.detail-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 5px;
+    padding-bottom: 0.5rem;
+}
+.detail-name{
+    width: 100px;
+    text-align: left;
+    padding: 5px 5px 5px 5px;
+}
+.detail-data{
+    background-color: white;
+     text-align: left;
+    padding: 5px 5px 5px 5px;
+    width:350px;
+}
+.slips, .detail-slip{
+    width: 100px;
+}
+.detail-payment{
+    display: flex;
+    flex-direction: column;
+}
+
+.postsliptbtn{
+    width:150px;
+}
+
+.order-address{
+    width: 100%;
+    max-width: 200px;
+}
+
+.order-address tr td{
+    text-align: left;
+}
+
+.order-emty{
+    margin-top: 1rem;
+    height: auto;
+    background-color: var(--color-bg);
+    padding: 10px;
+    margin-bottom: 5px;
+}
