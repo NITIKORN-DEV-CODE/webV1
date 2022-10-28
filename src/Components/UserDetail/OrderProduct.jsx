@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react"
 import OrderImage from "./OrderImage"
 import './UserDetail.css'
+import Configs from '../../../package.json'
 
 export const OrderProduct = ({ProductID, Amount}) =>{
     const[product, setProduct] = useState([])
@@ -11,8 +12,7 @@ export const OrderProduct = ({ProductID, Amount}) =>{
 
     const getProduct = async (id) =>{
         try {
-            const webApi = 'http://127.0.0.1:8000'
-            const res = await fetch(webApi+'/product/'+ id)
+            const res = await fetch(Configs.webapi+'/product/'+ id)
             
             if (!res.ok) {
             const message = `An error has occured: ${res.status} - ${res.statusText}`

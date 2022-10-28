@@ -5,43 +5,14 @@
     height: auto;
 }
 
-.main-promotion {
-    position: relative;
-    height: auto;
-    margin-top: 1rem;
-    padding-left: 5px;
-    padding-right: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
-}
-
-.main-promotion img{
-    width: 90vw;
-    max-width: 600px;
-}
-
-.pro-detail {
-    margin-top: 10px;
-    align-self: center;
-    max-width: 600px;
-    text-align: justify;
-}
-
-.pro-topic {
-    font-size: 1.7rem;
-}
-
-.pro-explain {
-    font-size: 1rem;
-    font-style: italic;
-}
 
 .containerMain{
     position:relative;
-    margin-top: 2rem;
-    padding: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-top: 0.5rem;
     height: auto;
     max-width: 1200px;
 
@@ -52,9 +23,90 @@
     gap: 10px;
 }
 
+
+.main-promotion {
+    position: relative;
+    height: 400px;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pro-content{
+    margin-top: 1rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pro-content img{
+    width: 90%;
+    max-width: 600px;
+}
+
+.pro-detail {
+    margin-top: 10px;
+    padding-bottom: 0.5rem;
+    max-width: 600px;
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.pro-topic {
+    font-size: 1.7rem;
+}
+
+.pro-explain {
+    font-size: 1rem;
+    font-style: italic;
+    text-align: left;
+}
+
 @media (max-width:600px){
     .containerMain{
         display:grid;
         grid-template-columns: auto;
+    }
+
+    .main-promotion {
+        height: 360px;
+    }
+
+    .pro-topic {
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media (max-width:420px){
+    .main-promotion {
+        height: 300px;
+    }
+}
+
+@media (max-width:300px){
+    .main-promotion {
+        height: 250px;
+    }
+    .pro-topic {
+        font-size: 1.2rem;
+    }
+
+    .pro-explain {
+        font-size: 0.9rem;
     }
 }

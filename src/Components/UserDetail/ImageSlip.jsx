@@ -1,13 +1,13 @@
 import React from "react"
 import './UserDetail.css'
+import Configs from '../../../package.json'
 
 export const ImageSlip = ({image:{id, imgName, imgUrl}}) =>{
-    const imgSvr = "http://127.0.0.1:8000"
     return(
         <>
             
             <div >
-                <img src={imgSvr+imgUrl} alt="" className="slips" />
+                <img src={Configs.webapi+imgUrl} alt="" className="slips" />
             </div>
    
         </>

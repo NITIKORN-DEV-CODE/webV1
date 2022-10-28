@@ -10,6 +10,7 @@ import { selectProfile, selectUser } from '../Apps/sessionSlice'
 import Address from './UserDetail/Address'
 
 import { Link, Navigate } from 'react-router-dom'
+import Configs from '../../package.json'
 
 export const AddressAdd = () =>{
     const Dispatch = useDispatch()
@@ -45,8 +46,7 @@ export const AddressAdd = () =>{
         formData.append("updateDate", datetime)
 
         try {
-            const webApi = 'http://127.0.0.1:8000'
-            const res = await fetch(webApi+'/address', {
+            const res = await fetch(Configs.webapi+'/address', {
                                 method:'POST',
                                 body: formData
                             })
@@ -65,8 +65,7 @@ export const AddressAdd = () =>{
     const getProvinceByID = async (pk) =>{
         let prov = ''
         try {
-            const webApi = 'http://127.0.0.1:8000'
-            const res = await fetch(webApi+'/province/'+pk)
+            const res = await fetch(Configs.webapi+'/province/'+pk)
             
             if (!res.ok) {
             const message = `An error has occured: ${res.status} - ${res.statusText}`
@@ -84,8 +83,7 @@ export const AddressAdd = () =>{
     const getAmphoeByID = async (pk) =>{
         let prov = ''
         try {
-            const webApi = 'http://127.0.0.1:8000'
-            const res = await fetch(webApi+'/amphoe/'+pk)
+            const res = await fetch(Configs.webapi+'/amphoe/'+pk)
             
             if (!res.ok) {
             const message = `An error has occured: ${res.status} - ${res.statusText}`
@@ -103,8 +101,7 @@ export const AddressAdd = () =>{
     const getTambolByID = async (pk) =>{
         let prov = ''
         try {
-            const webApi = 'http://127.0.0.1:8000'
-            const res = await fetch(webApi+'/tambol/'+pk)
+            const res = await fetch(Configs.webapi+'/tambol/'+pk)
             
             if (!res.ok) {
             const message = `An error has occured: ${res.status} - ${res.statusText}`
@@ -139,8 +136,7 @@ export const AddressAdd = () =>{
 
     const getProvinces = async () =>{
         try {
-            const webApi = 'http://127.0.0.1:8000'
-            const res = await fetch(webApi+'/province')
+            const res = await fetch(Configs.webapi+'/province')
             
             if (!res.ok) {
             const message = `An error has occured: ${res.status} - ${res.statusText}`
@@ -156,8 +152,7 @@ export const AddressAdd = () =>{
 
     const getAmphoes = async (pCode) =>{
         try {
-            const webApi = 'http://127.0.0.1:8000'
-            const res = await fetch(webApi+'/province/amphoe/'+pCode)
+            const res = await fetch(Configs.webapi+'/province/amphoe/'+pCode)
             
             if (!res.ok) {
             const message = `An error has occured: ${res.status} - ${res.statusText}`
@@ -173,8 +168,7 @@ export const AddressAdd = () =>{
 
     const getTambols = async (aCode) =>{
         try {
-            const webApi = 'http://127.0.0.1:8000'
-            const res = await fetch(webApi+'/province/tambol/'+aCode)
+            const res = await fetch(Configs.webapi+'/province/tambol/'+aCode)
             
             if (!res.ok) {
             const message = `An error has occured: ${res.status} - ${res.statusText}`
@@ -215,8 +209,7 @@ export const AddressAdd = () =>{
 
     const getOrderAddress = async (id) =>{
         try {
-            const webApi = 'http://127.0.0.1:8000'
-            const res = await fetch(webApi+'/customer/'+ id)
+            const res = await fetch(Configs.webapi+'/customer/'+ id)
             
             if (!res.ok) {
             const message = `An error has occured: ${res.status} - ${res.statusText}`

@@ -3,6 +3,7 @@
   "name": "manakhonweb",
   "version": "0.1.0",
   "private": true,
+  "webapi":"http://tools.manakhon.com",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
     "@testing-library/jest-dom": "^5.16.5",

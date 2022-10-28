@@ -12,8 +12,7 @@ export const OrderDetail = ({order:{id,address, imageslip, orderPaid,orderRecept
     const [posted, setPosted] = useState(false)
     const [slipurl, setSlipUrl] = useState('')
     const [post, setPost] = useState(false)
-    const webApi = "http://127.0.0.1:8000"
-
+    
     const togglePostSlip = (isPost, isPosted, slipPatch) =>{
         setPost(isPost)
         if(isPosted){

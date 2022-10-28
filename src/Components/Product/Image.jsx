@@ -1,13 +1,14 @@
 import React from "react"
 import './Product.css'
+import Configs from '../../../package.json'
 
 
 export const Image = ({image:{id, imgName, imgUrl}}) =>{
-    const imgSvr = "http://127.0.0.1:8000"
+    
     return(
     <>
         <div className="product-img">
-            <img src={imgSvr+imgUrl} alt="" />
+            <img src={Configs.webapi+imgUrl} alt="" />
         </div>
     </>)
 }

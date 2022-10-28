@@ -12,6 +12,7 @@ import { selectCartItems, selectCartTotalAmount, setCartTotal, setClearCart, set
 import CartItemPage from './Cart/CartItemPage'
 import Button from 'react-bootstrap/Button'
 import { Link, Navigate } from 'react-router-dom'
+import Configs from '../../package.json'
 
 export const OrderSummary = () =>{
     const uName = useSelector(selectUser)
@@ -54,8 +55,7 @@ export const OrderSummary = () =>{
         formData.append("updateDate", datetime)
 
         try {
-            const webApi = 'http://127.0.0.1:8000'
-            const res = await fetch(webApi+'/order', {
+            const res = await fetch(Configs.webapi+'/order', {
                                 method:'POST',
                                 body: formData
                             })
@@ -93,8 +93,7 @@ export const OrderSummary = () =>{
         //}
 
         try {
-            const webApi = 'http://127.0.0.1:8000'
-            const res = await fetch(webApi+'/orderproduct', {
+            const res = await fetch(Configs.webapi+'/orderproduct', {
                                 method:'POST',
                                 body: formData
                             })

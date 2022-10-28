@@ -7,6 +7,7 @@ import {useSelector, useDispatch} from 'react-redux'
 import { selectProfile, setUserEdit } from '../../Apps/sessionSlice'
 
 import toast from 'react-hot-toast';
+import Configs from '../../../package.json'
 
 export const ProfileEdit = ({ToggleEdit})=>{
     const Profile = useSelector(selectProfile)
@@ -33,8 +34,7 @@ export const ProfileEdit = ({ToggleEdit})=>{
         })
 
         try {
-            const webApi = 'http://127.0.0.1:8000'
-            const res = await fetch(webApi+'/profile', {
+            const res = await fetch(Configs.webapi+'/profile', {
                                 method:'PUT',
                                 headers: {
                                     'Content-Type':'application/json'

@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form'
 import Modal from 'react-bootstrap/Modal'
 import toast from 'react-hot-toast'
 import { useForm } from "react-hook-form";
+import Configs from '../../../package.json'
 
 export const PostSlip = ({togglePostSlip,OrderID}) =>{
     
@@ -25,8 +26,7 @@ export const PostSlip = ({togglePostSlip,OrderID}) =>{
         //  }
         
         try {
-            const webApi = 'http://127.0.0.1:8000'
-            const res = await fetch(webApi+'/imageslip', {
+            const res = await fetch(Configs.webapi+'/imageslip', {
                                 method:'POST',
                                 body: formData
                             })
@@ -37,7 +37,7 @@ export const PostSlip = ({togglePostSlip,OrderID}) =>{
     
             const data = await res.json()
             toast.success("อัปโหลดสลิปสำเร็จ")
-            togglePostSlip(false,true,webApi+data.imgUrl)
+            togglePostSlip(false,true,Configs.webapi+data.imgUrl)
             
         } catch (err) { console.log(err) }
     }   

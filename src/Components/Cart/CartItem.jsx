@@ -3,6 +3,7 @@ import "./CartStyle.css"
 import { Button } from "react-bootstrap"
 import {useDispatch} from 'react-redux'
 import { setMoveItemFromCart, setIncreaseItem, setDecreaseItem,  setCartTotal } from "../../Apps/cartSlice"
+import Configs from '../../../package.json'
 
 export const CartItem = ({item}) =>{
 
@@ -22,12 +23,11 @@ export const CartItem = ({item}) =>{
         disPatch(setCartTotal())
     }
 
-    const imgSvr = "http://127.0.0.1:8000"
     return(
         <>
             <div className="cartItemMain" key={item[0]}>
                 {item[3].map((img)=>(
-                    <img src={imgSvr+img.imgUrl} alt="" key={img.id} />
+                    <img src={Configs.webapi+img.imgUrl} alt="" key={img.id} />
                     ))}
                 
                 <div className="itemMiddle">
